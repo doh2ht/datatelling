@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTelling</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <script type="text/javascript"> 
+         document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.querySelectorAll(".myDIV");
+            elements.forEach(function(element) {
+                element.style.display = 'none';
+            });
+        });
+
+        function doDisplay(index, date) { 
+    var element = document.getElementById("myDIV-" + index); 
+    var link = document.getElementById("link-" + index);
+    var sign = element.style.display == 'none' ? '-' : '+';
+
+    link.innerHTML = `<span class="class-name">Class ${index}</span> <span class="date">${date}</span> <span class="toggle-sign">&nbsp;${sign}</span>`;
+    element.style.display = element.style.display == 'none' ? 'block' : 'none'; 
+}
+
+    </script> 
+</head>
+<body>
+    <div class="wrap">
+        <div class="navigation_bar">
+            <div class="course_name"><a href="index.html">DataTelling</a></div>
+            <div class="navigation">
+                <div>Syllabus</div>
+                <div><a href="schedule.html">Schedule</a></div>
+                <div><a href="projects.html">Projects</a></div>
+                <div><a href="reading.html">Readings</a></div>
+                <div><a href="students.html">Students</a></div>
+            </div>
+        </div>
+        <div class="contents">
+        <div class="project_detail">
+           <h2><span>Project 1 &nbsp;Everyday Data</span></h2>
+           <div class="project_description">Students will gather personal data from their daily lives, compile it into a database, and tell a story about mundane aspects of our lives. The objective is to restore the living texture of "data" in our daily lives and to reclaim it from its unfeeling, algorithmic, and non-human connotations. Rather than using data solely to improve efficiency, the aim is to encourage individuals to use data to connect with themselves and others on a deeper, more humane level.
+        </div>
+           <div class="lecture"><h2><span>Lecture</span> can be found here</h2></div> 
+           <h2><span>References</span></h2>
+           <div><span>Dear Data</span> by Giogia Lupi</div>
+           <div>Nostalgia, David </div>
+        </div>
+    </div>
+</body>
+</html>

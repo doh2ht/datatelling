@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTelling</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <script type="text/javascript"> 
+         document.addEventListener('DOMContentLoaded', function() {
+            var elements = document.querySelectorAll(".myDIV");
+            elements.forEach(function(element) {
+                element.style.display = 'none';
+            });
+        });
+
+        function doDisplay(index, date) { 
+    var element = document.getElementById("myDIV-" + index); 
+    var link = document.getElementById("link-" + index);
+    var sign = element.style.display == 'none' ? '-' : '+';
+
+    link.innerHTML = `<span class="class-name">Class ${index}</span> <span class="date">${date}</span> <span class="toggle-sign">&nbsp;${sign}</span>`;
+    element.style.display = element.style.display == 'none' ? 'block' : 'none'; 
+}
+
+    </script> 
+</head>
+<body>
+    <div class="wrap">
+        <div class="navigation_bar">
+            <div class="course_name"><a href="index.html">DataTelling</a></div>
+            <div class="navigation">
+                <div><a href="syllabus.html">Syllabus</a></div>
+                <div><a href="schedule.html">Schedule</a></div>
+                <div><a href="projects.html">Projects</a></div>
+                <div><a href="reading.html">Readings</a></div>
+                <div><a href="students.html">Students</a></div>
+            </div>
+        </div>
+        <div class="contents">
+        <div class="projects">
+            <div><a href="">Project 1 &nbsp;Everyday Data</a></div>
+            <div><a href="">Project 2 &nbsp;Sequencing Unsorted Data</a></div>
+            <div><a href="">Project 3 &nbsp;Choose Your Own Path</a></div>
+        </div>
+    </div>
+</body>
+</html>
